@@ -1,11 +1,6 @@
-import React, { useState } from "react";
-import { useLocation } from "react-router";
+import React from "react";
 
 function Results({ calories }) {
-  //   const location = useLocation();
-
-  //   let calories = location.state.data;
-
   console.log(calories);
 
   const caloriegoals = calories?.data?.goals;
@@ -60,19 +55,29 @@ function Results({ calories }) {
           <tr className="border-b bg-gray-800 border-green-700 ">
             <td className="px-6 sm:px-2 py-4">{Math.round(BMR)}</td>
 
-            <td className="px-6 sm:px-2 py-4">{Math.round(maintainWeightCalories)}cal</td>
+            <td className="px-6 sm:px-2 py-4">
+              {Math.round(maintainWeightCalories)}cal
+            </td>
 
-            <td className="px-6 sm:px-2 py-4">{Math.round(mildWeightLoss)}cal</td>
+            <td className="px-6 sm:px-2 py-4">
+              {Math.round(mildWeightLoss)}cal
+            </td>
 
             <td className="px-6 sm:px-2 py-4">{Math.round(weightLoss)}cal</td>
 
-            <td className="px-6 sm:px-2 py-4">{Math.round(extremeWeightLoss)}cal</td>
+            <td className="px-6 sm:px-2 py-4">
+              {Math.round(extremeWeightLoss)}cal
+            </td>
 
-            <td className="px-6 sm:px-2 py-4">{Math.round(mildWeightGain)}cal</td>
+            <td className="px-6 sm:px-2 py-4">
+              {Math.round(mildWeightGain)}cal
+            </td>
 
             <td className="px-6 sm:px-2 py-4">{Math.round(weightGain)}cal</td>
 
-            <td className="px-6 sm:px-2 py-4">{Math.round(extremeWeightGain)}cal</td>
+            <td className="px-6 sm:px-2 py-4">
+              {Math.round(extremeWeightGain)}cal
+            </td>
           </tr>
         </tbody>
       </table>

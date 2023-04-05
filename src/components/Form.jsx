@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { fetchFromAPI } from "../fetchFromAPI";
 import Results from "./Results";
 
-
 function Form() {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
@@ -10,8 +9,8 @@ function Form() {
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
   const [activity, setActivity] = useState("");
-const [calories, setCalories] = useState('');
-  
+  const [calories, setCalories] = useState("");
+
   const handleGenderChange = (e) => {
     setGender(e.target.value);
   };
@@ -24,16 +23,16 @@ const [calories, setCalories] = useState('');
     e.preventDefault();
 
     try {
-      const response = await fetchFromAPI(age, gender, height, weight, activity);
+      const response = await fetchFromAPI(
+        age,
+        gender,
+        height,
+        weight,
+        activity
+      );
       setCalories(response);
-      console.log(calories)
-      
-      
-
-      
     } catch (error) {
       console.log(error);
-      
     }
   };
 
@@ -74,7 +73,9 @@ const [calories, setCalories] = useState('');
             value={gender}
             onChange={handleGenderChange}
           >
-             <option value="" disabled selected hidden>Gender</option>
+            <option value="" disabled selected hidden>
+              Gender
+            </option>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
@@ -132,15 +133,11 @@ const [calories, setCalories] = useState('');
             Submit
           </button>
         </div>
-
-       
       </form>
 
       {console.log(calories)}
 
-      {calories && calories !== '' && <Results calories={calories} />}
-
-      
+      {calories && calories !== "" && <Results calories={calories} />}
     </div>
   );
 }

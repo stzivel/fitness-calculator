@@ -1,21 +1,11 @@
-import { Route, Routes} from 'react-router';
-
-
-import './App.css';
-import Form from './components/Form';
-import Results from './components/Results';
+import "./App.css";
+import Form from "./components/Form";
 
 function App() {
   return (
-<div className="App">
-      
-  <Form/>
-      
-      
-      </div>
-      
-      
-    
+    <div className="App">
+      <Form />
+    </div>
   );
 }
 
