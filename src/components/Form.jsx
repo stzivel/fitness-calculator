@@ -74,6 +74,7 @@ const [calories, setCalories] = useState('');
             value={gender}
             onChange={handleGenderChange}
           >
+             <option value="" disabled selected hidden>Gender</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
