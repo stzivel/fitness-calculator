@@ -7,7 +7,7 @@ const options = {
 
    },
   headers: {
-    'X-RapidAPI-Key': 'c347851e80msh7e86a760ca4fe3bp13a181jsn772517902f16',
+    'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
     'X-RapidAPI-Host': 'fitness-calculator.p.rapidapi.com'
   }
 };
